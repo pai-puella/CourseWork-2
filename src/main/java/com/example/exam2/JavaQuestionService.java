@@ -37,5 +37,15 @@ public class JavaQuestionService implements QuestionService {
         int index = random.nextInt(questions.size());
         return (Question) questions.toArray()[index];
     }
+
+    @Override
+    public Question remove(String question) {
+        return null;
+    }
+
+    @Override
+    public Collection<Question> getQuestions() {
+        return null;
+    }
 }
 

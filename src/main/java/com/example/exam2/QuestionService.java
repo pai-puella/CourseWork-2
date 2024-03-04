@@ -9,4 +9,8 @@ public interface QuestionService {
     void remove(Question question);
     Collection<Question> getAll();
     Question getRandomQuestion();
+
+    Question remove(String question);
+
+    Collection<Question> getQuestions();
 }
