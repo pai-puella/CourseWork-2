@@ -11,7 +11,6 @@ public class JavaQuestionController {
 
     private final QuestionService service;
 
-    @Autowired
     public JavaQuestionController(QuestionService service) {
         this.service = service;
     }
