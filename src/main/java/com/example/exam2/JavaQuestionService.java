@@ -47,5 +47,10 @@ public class JavaQuestionService implements QuestionService {
     public Collection<Question> getQuestions() {
         return null;
     }
+
+    @Override
+    public int getQuestionCount() {
+        return questions.size();
+    }
 }
 

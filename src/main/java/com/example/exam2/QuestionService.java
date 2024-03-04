@@ -13,4 +13,6 @@ public interface QuestionService {
     Question remove(String question);
 
     Collection<Question> getQuestions();
+
+    int getQuestionCount();
 }
