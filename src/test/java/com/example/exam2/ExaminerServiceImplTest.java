@@ -42,7 +42,7 @@ class ExaminerServiceImplTest {
         int questionCount = 5;
         when(questionService.getQuestionCount()).thenReturn(questionCount);
         Set<Question> mockQuestions = createMockQuestions(amount);
-        when(questionService.getRandomQuestion()).thenReturn(mockQuestions);
+        when(questionService.getRandomQuestion()).thenReturn(mockQuestions.iterator().next());
 
         Collection<Question> result = examinerService.getQuestions(amount);
 
