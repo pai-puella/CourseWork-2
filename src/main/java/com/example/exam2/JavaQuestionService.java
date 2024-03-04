@@ -1,10 +1,13 @@
 package com.example.exam2;
 
+import org.springframework.stereotype.Service;
+
 import java.util.Collection;
 import java.util.HashSet;
 import java.util.Random;
 import java.util.Set;
 
+@Service
 public class JavaQuestionService implements QuestionService {
     private Set<Question> questions = new HashSet<>();
     private Random random = new Random();

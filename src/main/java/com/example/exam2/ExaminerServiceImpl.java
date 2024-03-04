@@ -3,7 +3,9 @@ package com.example.exam2;
 import java.util.*;
 import org.springframework.http.HttpStatus;
 import com.example.exam2.Question;
+import org.springframework.stereotype.Service;
 
+@Service
 public class ExaminerServiceImpl implements ExaminerService {
 
     private final QuestionService questionService;
