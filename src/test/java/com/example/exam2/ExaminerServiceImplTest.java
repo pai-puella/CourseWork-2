@@ -9,6 +9,7 @@ import static org.mockito.Mockito.*;
 
 import java.util.Collection;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 class ExaminerServiceImplTest {
@@ -42,7 +43,9 @@ class ExaminerServiceImplTest {
         int questionCount = 5;
         when(questionService.getQuestionCount()).thenReturn(questionCount);
         Set<Question> mockQuestions = createMockQuestions(amount);
-        when(questionService.getRandomQuestion()).thenReturn(mockQuestions.iterator().next());
+
+        List<Question> list = mockQuestions.stream().toList();
+        when(questionService.getRandomQuestion()).thenReturn(list.get(0), list.get(1),list.get(2));
 
         Collection<Question> result = examinerService.getQuestions(amount);
 
