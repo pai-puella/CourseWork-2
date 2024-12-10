@@ -8,6 +8,12 @@ class Exam2ApplicationTests {
 
 	@Test
 	void contextLoads() {
+		// Проверяет, что Spring контекст успешно загружается
 	}
 
+	@Test
+	void mainMethodStartsApplication() {
+		// Проверяет, что метод main успешно запускает приложение
+		Exam2Application.main(new String[]{});
+	}
 }
