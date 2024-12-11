@@ -1,6 +1,6 @@
-package com.example.exam2;
+package com.example.exam2.services;
 
-import com.example.exam2.Question;
+import com.example.exam2.models.Question;
 import java.util.Collection;
 
 public interface QuestionService {

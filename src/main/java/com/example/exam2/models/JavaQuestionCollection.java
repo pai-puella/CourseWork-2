@@ -1,4 +1,6 @@
-package com.example.exam2;
+package com.example.exam2.models;
+
+import com.example.exam2.models.Question;
 
 import java.util.ArrayList;
 import java.util.HashSet;

@@ -1,8 +1,10 @@
-package com.example.exam2;
+package com.example.exam2.services;
 
 import java.util.*;
+
+import com.example.exam2.NotEnoughQuestionsException;
 import org.springframework.http.HttpStatus;
-import com.example.exam2.Question;
+import com.example.exam2.models.Question;
 import org.springframework.stereotype.Service;
 
 @Service

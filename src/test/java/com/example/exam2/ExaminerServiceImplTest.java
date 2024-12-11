@@ -1,5 +1,8 @@
 package com.example.exam2;
 
+import com.example.exam2.models.Question;
+import com.example.exam2.services.ExaminerServiceImpl;
+import com.example.exam2.services.QuestionService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mock;

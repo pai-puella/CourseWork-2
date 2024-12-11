@@ -1,5 +1,8 @@
 package com.example.exam2;
 
+import com.example.exam2.models.Question;
+import com.example.exam2.services.JavaQuestionService;
+import com.example.exam2.services.QuestionService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -81,6 +84,25 @@ public class JavaQuestionServiceTest {
         int questionCount = questionService.getQuestionCount();
 
         assertEquals(2, questionCount);
+    }
+
+    @Test
+    public void testNoDuplicateQuestionsAndAnswers() {
+
+        Question question1 = new Question("What is Java?", "Programming language.");
+        questionService.add(question1);
+
+        Question question2 = new Question("What is Java?", "Programming language.");
+        questionService.add(question2);
+
+        Collection<Question> allQuestions = questionService.getAll();
+        assertEquals(1, allQuestions.size(), "Should only contain one question");
+
+        Question question3 = new Question("What is a class?", "A class is a blueprint for creating objects.");
+        questionService.add(question3);
+
+        allQuestions = questionService.getAll();
+        assertEquals(2, allQuestions.size(), "Should contain two different questions");
     }
 }
 

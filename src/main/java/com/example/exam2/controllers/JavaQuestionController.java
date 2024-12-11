@@ -1,6 +1,7 @@
-package com.example.exam2;
+package com.example.exam2.controllers;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import com.example.exam2.models.Question;
+import com.example.exam2.services.QuestionService;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Collection;
